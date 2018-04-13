@@ -34,7 +34,7 @@ public class HostNotVerifiedActivity extends Activity {
     public static boolean isHostnameTrusted(Context context, String hostname) {
 	// Do not show the trus activity if null hostname
 	if (hostname == null) {
-	    return false;
+	    return true;
 	}
 
 	boolean t = context.getSharedPreferences(HOSTS_FILE, MODE_PRIVATE).
