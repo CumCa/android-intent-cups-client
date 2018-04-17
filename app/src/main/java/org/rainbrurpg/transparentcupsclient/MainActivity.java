@@ -226,7 +226,7 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
                 public void run() {
                     finish();
                 }
-	    }, 3000); // 3 seconds
+	    }, 10000); // 10 seconds
     }
 	
     /**
