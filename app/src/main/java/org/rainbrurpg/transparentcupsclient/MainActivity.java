@@ -226,7 +226,7 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
                 public void run() {
                     finish();
                 }
-	    }, 3000); // 3 seconds
+	    }, 10000); // 10 seconds
     }
 	
     /**
@@ -255,13 +255,11 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
 	
 	PrintRequestResult result = printer.print(job);
 	L.w("PrintResult :" + result);
-	if (result.isSuccessfulResult()) {
-	    finish();
-	} else {
+	if (!result.isSuccessfulResult()) {
             Toast.makeText(this, result.getResultDescription(),
 			   Toast.LENGTH_LONG).show();
-	    waitAndFinish();
 	}
+	waitAndFinish();
     }
 
     private static class NullPrinterException extends Exception {
