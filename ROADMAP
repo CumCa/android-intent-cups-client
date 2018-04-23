@@ -25,6 +25,7 @@
   Its theme should be defined by
   android:theme="@style/AndroidCupsPrint.AlertDialog"
 **** TODO Correct project setup
+     CLOCK: [2018-04-23 lun. 16:55]
      CLOCK: [2018-04-13 ven. 15:18]--[2018-04-13 ven. 15:24] =>  0:06
      CLOCK: [2018-04-12 jeu. 16:26]--[2018-04-12 jeu. 16:32] =>  0:06
      CLOCK: [2018-04-11 mer. 16:48]--[2018-04-11 mer. 17:41] =>  0:53
@@ -38,24 +39,24 @@
   - [X] Shouldn't show host trust HostNotVerifiedActivity for null hostname
     return true instead of false
   - [X] Should call waitAndFinish() when print is successful
+- [X] Should set waitAndFinish() to 10 seconds
 
-- [ ] Should set waitAndFinish() to 10 seconds
-- [ ] Should remove example settings
+- [X] travis-ci build fails
+  Currently, we accept the license but can't start AVD device
 - [ ] Must add screenshots to README.md
-- [ ] We should add a "Host not trusted" error if the we try to print with
-  an untrusted host
+  - [ ] Must be resized images
+  - [ ] Link to full-size images
 
 - [ ] May rename application (Currently transparent-cups-client)
   Drawn name could be "CUPS intent"
-- [ ] May use travis-ci and others here
-  - [ ] travis is supported
+- [ ] Should remove example settings
+- [ ] We should add a "Host not trusted" error if the we try to print with
+  an untrusted host
+
+- [-] May use travis-ci and others here
+  - [X] travis is supported
   https://docs.travis-ci.com/user/languages/android/
   - [ ] Maybe coverity scan ?, codecov and codacy
-
-- [ ] travis-ci build fails
-A problem occurred configuring project ':app'.
-> You have not accepted the license agreements of the following SDK components:
-  [Android SDK Platform 26, Android SDK Build-Tools 26.0.2].
 
 - [ ] We have a failling InstrumentedTest
   org.rainbrurpg.transparentcupsclient.ExampleInstrumentedTest > useAppContext[SM-T580 - 7.0] FAILED 
