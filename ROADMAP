@@ -25,6 +25,9 @@
   Its theme should be defined by
   android:theme="@style/AndroidCupsPrint.AlertDialog"
 **** TODO Correct project setup
+     CLOCK: [2018-04-23 lun. 21:49]--[2018-04-23 lun. 22:24] =>  0:35
+     CLOCK: [2018-04-23 lun. 21:30]--[2018-04-23 lun. 21:35] =>  0:05
+     CLOCK: [2018-04-23 lun. 19:51]--[2018-04-23 lun. 20:13] =>  0:22
      CLOCK: [2018-04-23 lun. 18:42]--[2018-04-23 lun. 19:25] =>  0:43
      CLOCK: [2018-04-23 lun. 16:55]--[2018-04-23 lun. 18:30] =>  1:35
      CLOCK: [2018-04-13 ven. 15:18]--[2018-04-13 ven. 15:24] =>  0:06
@@ -46,19 +49,26 @@
 - [X] Must add screenshots to README.md
   - [X] Must be resized images
   - [X] Link to full-size images
+- [X] We have a failling InstrumentedTest
+  org.rainbrurpg.transparentcupsclient.ExampleInstrumentedTest > useAppContext[SM-T580 - 7.0] FAILED 
+        org.junit.ComparisonFailure: expected:<...inbrurpg.transparent[printing]> but was:<...inbrurpg.tran
 
-- [ ] Try to configure an emulator using Android Studio
-
+- [-] Try to configure an emulator using Android Studio
+  - [X] kvm enabled
+  - [ ] Configure android studio
+  - [ ] Can we configure a Makefile rule for this ?
+    
 - [-] Try to use coverity scan
   - [X] Add badge
-  - [ ] Must fix all lint issues before submitting
+  - [X] Must fix all lint issues before submitting
+    app/src/main/res/drawable/ic_sync_black_24dp.xml:8
   - [ ] How to build and submit
     ~/cov/cov-analysis-linux64-2017.07/bin/cov-build --dir cov-int make
     Follow https://scan.coverity.com/download?tab=java
-    
 - [ ] May rename application (Currently transparent-cups-client)
   Drawn name could be "CUPS intent"
 - [ ] Should remove example settings
+
 - [ ] We should add a "Host not trusted" error if the we try to print with
   an untrusted host
 
@@ -66,10 +76,6 @@
   - [X] travis is supported
   https://docs.travis-ci.com/user/languages/android/
   - [ ] Maybe coverity scan ?, codecov and codacy
-
-- [ ] We have a failling InstrumentedTest
-  org.rainbrurpg.transparentcupsclient.ExampleInstrumentedTest > useAppContext[SM-T580 - 7.0] FAILED 
-        org.junit.ComparisonFailure: expected:<...inbrurpg.transparent[printing]> but was:<...inbrurpg.tran
 **** DONE Main activity should finish if print successfull
      CLOCK: [2018-04-11 mer. 14:09]--[2018-04-11 mer. 15:23] =>  1:14
 - [X] Check for result of IppResult : a PrintRequestResult

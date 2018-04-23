@@ -12,7 +12,6 @@
     <string name="host_not_verified_activity_title">Hôte non vérifié</string>
 
     <string name="untrusted_abort_button">Annuler la connexion</string>
-    <string name="untrusted_couldnt_trust">Impossible d\'enregistrer le certificat du serveur. Veuillez consulter les logs de l\'application et soumettre une demande de bug au développeur.</string>
     <string name="untrusted_info">Votre serveur a envoyé un certificat que votre appareil n\'a pas considéré comme de confiance. Veuillez constuler les détails du certificat ci-desous, et choisir si vous décidez d\'y faire confiance ou non :</string>
     <string name="untrusted_title">Connexion SSL non fiable</string>
     <string name="untrusted_trust_button">Accepter la connexion</string>
