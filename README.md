@@ -1,6 +1,9 @@
 # android-intent-cups-client
 
 [![Build Status](https://travis-ci.org/rainbru/android-intent-cups-client.svg?branch=master)](https://travis-ci.org/rainbru/android-intent-cups-client)
+[![Coverity Scan Build Status](https://scan.coverity.com/projects/15582/badge.svg)](https://scan.coverity.com/projects/rainbru-android-intent-cups-client)
+
+
 
 Print from android jpeg intent filter to network cups printers
 
