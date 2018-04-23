@@ -10,6 +10,6 @@ answers to the *jpeg* intent filter and send file to a preselected network
 
 # Screenshots
 
-[![Settings screenShot](doc/screenshots/TCC-settings-tn.png)](doc/screenshots/TCC-settings.png)
+[![Settings screenShot](doc/screenshots/TCC-settings-tn.png)](doc/screenshots/TCC-settings.png?raw=true)
 [![Main activity screenShot](doc/screenshots/TCC-main-tn.png)](doc/screenshots/TCC-main.png?raw=true)
 
