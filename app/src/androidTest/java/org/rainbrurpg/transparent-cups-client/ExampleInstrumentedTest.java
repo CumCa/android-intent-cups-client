@@ -42,7 +42,7 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("org.rainbrurpg.transparentprinting",
+        assertEquals("org.rainbrurpg.transparentcupsclient",
 		     appContext.getPackageName());
     }
 }
