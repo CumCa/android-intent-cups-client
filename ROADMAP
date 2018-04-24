@@ -26,11 +26,12 @@
   android:theme="@style/AndroidCupsPrint.AlertDialog"
 
 **** TODO Fix lint errors and submit to coverity scan
-     CLOCK: [2018-04-24 mar. 19:22]
-- [-] Fix lint errors
+     CLOCK: [2018-04-24 mar. 19:22]--[2018-04-24 mar. 20:27] =>  1:05
+- [X] Fix lint errors
   - [X] Gradient-related attribute
     android:fillcolor
-  - [ ] Using dp instead of sp
+  - [X] Using dp instead of sp
+  - [X] Must translate more strings
 
 - [ ] How to build and submit
   ~/cov/cov-analysis-linux64-2017.07/bin/cov-build --dir cov-int make
