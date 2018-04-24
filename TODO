@@ -11,7 +11,8 @@ android-intent-cups-client - GPLv3 - android print inent.
    
 
 * v0.0.0-2 (11 Apr. 2017 - ???) SLOC ?,??? FT ?:?? UT ???
-- (3) Remove example_text preference
+- (4) Use sp in main activity layout
+- Remove example_text preference
 - Remove example_switch preference
 - Finally fixed travis-ci building
 - Prevent HostNotVerifiedActivity for null hostname
