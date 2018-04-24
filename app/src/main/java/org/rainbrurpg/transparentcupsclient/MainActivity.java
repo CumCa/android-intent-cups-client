@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
 	    return;
 	}
 	else{
-	    tv.setText("Impression en cours...");
+	    tv.setText(R.string.printing);
 	}
 	
     
