@@ -1,5 +1,6 @@
 2018-04-24  Jérôme Pasquier  <rainbru@free.fr>
 
+	* ic_launcher_foreground.xml (gradient): fix lint warnings.
 	* pref_general.xml: remove example_text preference.
 	* pref_general.xml: remove example_switch preference.
 

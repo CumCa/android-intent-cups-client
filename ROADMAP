@@ -24,7 +24,29 @@
 - [ ] HostNotVerifiedActivity is not really a dialog
   Its theme should be defined by
   android:theme="@style/AndroidCupsPrint.AlertDialog"
-**** TODO Correct project setup
+
+**** TODO Fix lint errors and submit to coverity scan
+     CLOCK: [2018-04-24 mar. 19:22]
+- [-] Fix lint errors
+  - [X] Gradient-related attribute
+    android:fillcolor
+  - [ ] Using dp instead of sp
+
+- [ ] How to build and submit
+  ~/cov/cov-analysis-linux64-2017.07/bin/cov-build --dir cov-int make
+  Follow https://scan.coverity.com/download?tab=java
+- [ ] May rename application (Currently transparent-cups-client)
+  Drawn name could be "CUPS intent"
+
+- [ ] We should add a "Host not trusted" error if the we try to print with
+  an untrusted host
+
+- [-] May use travis-ci and others here
+  - [X] travis is supported
+  https://docs.travis-ci.com/user/languages/android/
+  - [ ] Maybe coverity scan ?, codecov and codacy
+
+**** DONE Correct project setup
      CLOCK: [2018-04-23 lun. 21:49]--[2018-04-23 lun. 22:24] =>  0:35
      CLOCK: [2018-04-23 lun. 21:30]--[2018-04-23 lun. 21:35] =>  0:05
      CLOCK: [2018-04-23 lun. 19:51]--[2018-04-23 lun. 20:13] =>  0:22
@@ -52,30 +74,25 @@
 - [X] We have a failling InstrumentedTest
   org.rainbrurpg.transparentcupsclient.ExampleInstrumentedTest > useAppContext[SM-T580 - 7.0] FAILED 
         org.junit.ComparisonFailure: expected:<...inbrurpg.transparent[printing]> but was:<...inbrurpg.tran
-
-- [-] Try to configure an emulator using Android Studio
+- [X] Try to configure an emulator using Android Studio
   - [X] kvm enabled
-  - [ ] Configure android studio
-  - [ ] Can we configure a Makefile rule for this ?
+  - [X] Configure android studio
+  - [X] Can we configure a Makefile rule for this ? Not really usable
     
+- [X] Should remove example settings
 - [-] Try to use coverity scan
   - [X] Add badge
   - [X] Must fix all lint issues before submitting
     app/src/main/res/drawable/ic_sync_black_24dp.xml:8
-  - [ ] How to build and submit
-    ~/cov/cov-analysis-linux64-2017.07/bin/cov-build --dir cov-int make
-    Follow https://scan.coverity.com/download?tab=java
-- [ ] May rename application (Currently transparent-cups-client)
-  Drawn name could be "CUPS intent"
-- [ ] Should remove example settings
+**** DONE Must remove example settings
+     CLOCK: [2018-04-24 mar. 18:16]--[2018-04-24 mar. 19:12] =>  0:56
 
-- [ ] We should add a "Host not trusted" error if the we try to print with
-  an untrusted host
+     Namely 'social recommendation' and 'Display name'
 
-- [-] May use travis-ci and others here
-  - [X] travis is supported
-  https://docs.travis-ci.com/user/languages/android/
-  - [ ] Maybe coverity scan ?, codecov and codacy
+- [X] Frist, remove example_switch
+
+- [X] Then example_text
+  There must be code in Activity cause it makes the app crash
 **** DONE Main activity should finish if print successfull
      CLOCK: [2018-04-11 mer. 14:09]--[2018-04-11 mer. 15:23] =>  1:14
 - [X] Check for result of IppResult : a PrintRequestResult
