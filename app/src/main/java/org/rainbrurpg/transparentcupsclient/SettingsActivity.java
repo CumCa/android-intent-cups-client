@@ -251,7 +251,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-            bindPreferenceSummaryToValue(findPreference("example_text"));
             bindPreferenceSummaryToValue(findPreference("printer_list"));
 
 	    ListPreference pl = (ListPreference)findPreference("printer_list");
