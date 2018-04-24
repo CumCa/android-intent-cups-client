@@ -83,7 +83,7 @@ public class MainActivity extends Activity {
 	L.w("Main activity : getting printer default value : " + printer);
 
 	if (printer == "NONE"){
-	    tv.setText("Aucune imprimante sélectionnée!");
+	    tv.setText(R.string.no_printer_found);
 	    return;
 	}
 	else{

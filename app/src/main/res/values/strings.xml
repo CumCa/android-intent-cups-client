@@ -78,4 +78,6 @@
     <string name="dyn_string">This is a dynamic string from Java resources
     (Now in GPL!!)
       </string>
+
+    <string name="no_printer_found">"Aucune imprimante sélectionnée!"</string>
 </resources>

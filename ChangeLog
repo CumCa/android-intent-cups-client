@@ -1,6 +1,7 @@
 2018-04-24  Jérôme Pasquier  <rainbru@free.fr>
 
-	* activity_main.xml: uses sp fopr textSize to fix lint warning.
+	* MainActivity.java: use resource string for 'No printer found'.
+	* activity_main.xml: uses sp for textSize to fix lint warning.
 	* ic_launcher_foreground.xml (gradient): fix lint warnings.
 	* pref_general.xml: remove example_text preference.
 	* pref_general.xml: remove example_switch preference.
