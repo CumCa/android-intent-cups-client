@@ -47,8 +47,13 @@ import android.app.Activity;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Enumeration;
 
 import java.net.URI;
+import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.NetworkInterface;
 import java.net.URISyntaxException;
 
 import javax.net.ssl.SSLException;
@@ -259,12 +264,20 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
 	    changePrinterListSummary("Recherche d'imprimantes en cours, " + 
 				     "veullez patienter...");
 	    feedPrinterList();
-
+	    changeNIListSummary("Recherche d'interface réseauen cours, " + 
+				     "veullez patienter...");
+	    feedNetworkInterfaceList();
 	}
 
 	private void changePrinterListSummary(String str) {
 
 	    ListPreference pl = (ListPreference)findPreference("printer_list");
+	    pl.setSummary(str);
+	}
+
+	private void changeNIListSummary(String str) {
+
+	    ListPreference pl = (ListPreference)findPreference("network_interfaces_list");
 	    pl.setSummary(str);
 	}
 	
@@ -311,6 +324,72 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
 	    }.execute();
 	}
 
+	private void feedNetworkInterfaceList() {
+	    new AsyncTask<Void, Void, Map<String, String>>() {
+		@Override
+		protected Map<String, String> doInBackground(Void... params) {
+		    try {
+			// Network interfaces
+			Map<String, String> nis = new HashMap<>(); 
+			Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
+			while (networkInterfaces.hasMoreElements()) {
+			    
+			    NetworkInterface thisInterface = networkInterfaces.nextElement();
+			    Enumeration<InetAddress> inetAddresses = thisInterface.getInetAddresses();
+			    if (inetAddresses.hasMoreElements()) {
+				String niInfo = thisInterface.getDisplayName() + "\n";
+				
+				while (inetAddresses.hasMoreElements()) {
+				    InetAddress thisAddress = inetAddresses.nextElement();
+				    String gdn = thisInterface.getDisplayName();
+				    L.d("Got interface : " + gdn);
+				    nis.put(gdn, gdn);
+				    /*
+				    niInfo += "---\n";
+				    niInfo += "Address: " + thisAddress.getAddress() + "\n";
+				    niInfo += "CanonicalHostName: " + thisAddress.getCanonicalHostName() + "\n";
+				    niInfo += "HostAddress: " + thisAddress.getHostAddress() + "\n";
+				    niInfo += "HostName: " + thisAddress.getHostName() + "\n";
+				    
+				    */
+				}
+				
+				return nis;
+			    }
+
+			    
+			}
+		    } catch (SocketException e) {
+			L.e("Error getting network interfaces :", e);
+		    }
+		    return null;
+		}
+		
+		@Override
+		protected void onPostExecute(Map<String, String> nis) {
+		    /*
+		    ListPreference pl = (ListPreference)
+			findPreference("network_interfaces_list");
+
+		    List<CharSequence> entries = new ArrayList<CharSequence>();
+		    List<CharSequence> entryValues = new ArrayList<CharSequence>();
+
+		    for (Map.Entry<String, String> entry : nis.entrySet()) {
+			entryValues.add(entry.getKey());
+			entries.add(entry.getValue());
+		    }
+		    pl.setEntries(entries.toArray(new CharSequence[entries.size()]));
+		    pl.setEntryValues(entryValues.toArray(new CharSequence[entryValues.
+									   size()]));
+		    */
+		    changeNIListSummary("Done");
+		}
+	    }.execute();
+
+	}
+	
+
+	
     /**
      * Ran in background thread. Will do an mDNS scan of local printers
      *
@@ -334,6 +413,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
 
         return printers;
     }
+
 	
     }
 }
