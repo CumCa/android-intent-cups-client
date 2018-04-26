@@ -5,16 +5,10 @@ android-intent-cups-client - GPLv3 - android print inent.
 
 === ChangeLog ===
    (6 items by revision)
-   SLOC is `sloccoutn src` (run a `make clean` in src/trans... before)
-   Ut is FAIL|SUCCESS (run `make check` in src/trans...)
+   SLOC is `sloccoutn src` (run a `make clean` . before)
+   Ut is FAIL|SUCCESS (run `make check`)
    Add a git tag for r-1 then `git push origin {tag}`
    
 
-* v0.0.0-2 (11 Apr. 2017 - ???) SLOC ?,??? FT ?:?? UT ???
-- (6) List network interfaces in preferences activity
-- Remove unused resources
-- Use sp in main activity layout
-- Remove example_text preference
-- Remove example_switch preference
-- Finally fixed travis-ci building
-- Prevent HostNotVerifiedActivity for null hostname
+* v0.0.0-3 (26 Apr. 2017 - ???) SLOC ?,??? FT ?:?? UT ???
+

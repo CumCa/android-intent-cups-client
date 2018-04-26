@@ -1,3 +1,12 @@
+* v0.0.0-2 (11 Apr. 2017 - 26 Apr. 2017) SLOC 4,999 FT 9:12 UT SUCCESS
+- List network interfaces in preferences activity
+- Remove unused resources
+- Use sp in main activity layout
+- Remove example_text preference
+- Remove example_switch preference
+- Finally fixed travis-ci building
+- Prevent HostNotVerifiedActivity for null hostname
+
 * v0.0.0-1 (10 Apr. 2017 - 11 Apr. 2017) SLOC 5,087 FT 2:27 UT ???
 - Add travis-ci support and badge
 - Change MainActivity text size
