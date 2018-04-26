@@ -344,16 +344,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
 				    String gdn = thisInterface.getDisplayName();
 				    L.d("Got interface : " + gdn);
 				    nis.put(gdn, gdn);
-				    /*
-				    niInfo += "---\n";
-				    niInfo += "Address: " + thisAddress.getAddress() + "\n";
-				    niInfo += "CanonicalHostName: " + thisAddress.getCanonicalHostName() + "\n";
-				    niInfo += "HostAddress: " + thisAddress.getHostAddress() + "\n";
-				    niInfo += "HostName: " + thisAddress.getHostName() + "\n";
-				    
-				    */
 				}
-				
 				return nis;
 			    }
 
@@ -367,7 +358,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
 		
 		@Override
 		protected void onPostExecute(Map<String, String> nis) {
-		    /*
 		    ListPreference pl = (ListPreference)
 			findPreference("network_interfaces_list");
 
@@ -381,7 +371,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
 		    pl.setEntries(entries.toArray(new CharSequence[entries.size()]));
 		    pl.setEntryValues(entryValues.toArray(new CharSequence[entryValues.
 									   size()]));
-		    */
 		    changeNIListSummary("Done");
 		}
 	    }.execute();

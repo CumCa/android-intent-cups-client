@@ -11,7 +11,8 @@ android-intent-cups-client - GPLv3 - android print inent.
    
 
 * v0.0.0-2 (11 Apr. 2017 - ???) SLOC ?,??? FT ?:?? UT ???
-- (5) Remove unused resources
+- (6) List network interfaces in preferences activity
+- Remove unused resources
 - Use sp in main activity layout
 - Remove example_text preference
 - Remove example_switch preference

@@ -47,6 +47,11 @@
   https://docs.travis-ci.com/user/languages/android/
   - [ ] Maybe coverity scan ?, codecov and codacy
 
+**** TODO Add a list preference to list network interfaces
+     CLOCK: [2018-04-26 jeu. 07:21]--[2018-04-26 jeu. 08:33] =>  1:12
+- [X] First, add the preference in layout
+- [X] Then in activity code, get the NetworkInterfacesList
+- [ ] May update screenshot in README
 **** DONE Correct project setup
      CLOCK: [2018-04-23 lun. 21:49]--[2018-04-23 lun. 22:24] =>  0:35
      CLOCK: [2018-04-23 lun. 21:30]--[2018-04-23 lun. 21:35] =>  0:05
