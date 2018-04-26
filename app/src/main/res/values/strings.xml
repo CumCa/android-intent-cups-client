@@ -67,10 +67,11 @@
     <string name="pref_title_vibrate">Vibrate</string>
 
     <string name="text_view_content">TextView</string>
-    <string name="dyn_string">This is a dynamic string from Java resources
-    (Now in GPL!!)
-    </string>
 
     <string name="no_printer_found">"Aucune imprimante sélectionnée!"</string>
     <string name="printing">Impression en cours&#8230;</string>
+    <string name="network_interfaces_list_title">List network interfaces
+    </string>
+    <string name="network_interfaces_list_summary">List all network interface/devices we can find.
+    </string>
 </resources>

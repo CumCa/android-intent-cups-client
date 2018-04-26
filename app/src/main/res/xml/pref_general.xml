@@ -9,4 +9,12 @@
       android:positiveButtonText="@null"
       android:title="@string/pref_title_choose_a_printer" />
 
+  <ListPreference
+      android:defaultValue="-1"
+      android:key="network_interfaces_list"
+      android:negativeButtonText="@null"
+      android:positiveButtonText="@null"
+      android:title="@string/network_interfaces_list_title"
+      android:summary="@string/network_interfaces_list_summary"/>
+  
 </PreferenceScreen>
