@@ -99,7 +99,7 @@ class PrinterList {
 	entries.add("Aucune");
 	entryValues.add("NONE");
 
-	// Get all USB devices
+	// Get all printers
 	for (Map.Entry<String, String> entry : printers.entrySet()) {
 	    entryValues.add(entry.getKey());
 	    entries.add(entry.getValue());
