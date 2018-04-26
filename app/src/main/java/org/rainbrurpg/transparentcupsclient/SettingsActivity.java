@@ -264,7 +264,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity{
 	    changePrinterListSummary("Recherche d'imprimantes en cours, " + 
 				     "veullez patienter...");
 	    feedPrinterList();
-	    changeNIListSummary("Recherche d'interface réseauen cours, " + 
+	    changeNIListSummary("Recherche d'interface réseau en cours, " + 
 				     "veullez patienter...");
 	    feedNetworkInterfaceList();
 	}
