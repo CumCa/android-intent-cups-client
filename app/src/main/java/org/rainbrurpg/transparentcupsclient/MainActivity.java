@@ -67,6 +67,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+	setFinishOnTouchOutside(false);
         setContentView(R.layout.activity_main);
     }
 
@@ -212,7 +213,6 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
         } else if (e instanceof NullPrinterException) {
             Toast.makeText(this, "Null printer", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Erreur d'impression", Toast.LENGTH_LONG).show();
 	    L.e("Printing job exception : ", e);
         }
 	waitAndFinish();
@@ -226,7 +226,7 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
                 public void run() {
                     finish();
                 }
-	    }, 10000); // 10 seconds
+	    }, 15000); // 15 seconds
     }
 	
     /**
