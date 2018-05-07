@@ -25,7 +25,14 @@
   Its theme should be defined by
   android:theme="@style/AndroidCupsPrint.AlertDialog"
 
+**** TODO Add a list preference to list network interfaces
+     CLOCK: [2018-04-26 jeu. 07:21]--[2018-04-26 jeu. 08:33] =>  1:12
+- [X] First, add the preference in layout
+- [X] Then in activity code, get the NetworkInterfacesList
+- [ ] May update screenshot in README
+
 **** TODO Fix lint errors and submit to coverity scan
+     CLOCK: [2018-05-07 lun. 06:15]
      CLOCK: [2018-05-07 lun. 05:14]--[2018-05-07 lun. 05:30] =>  0:16
      CLOCK: [2018-05-07 lun. 04:05]--[2018-05-07 lun. 04:20] =>  0:15
      CLOCK: [2018-04-24 mar. 19:22]--[2018-04-24 mar. 20:27] =>  1:05
@@ -40,6 +47,10 @@
     =tail cov-int/build-log.txt=
   - [X] Create and submit archive (from root directory)
     =tar caf aicc.bz2 cov-int=
+
+- [ ] Latest CI build failed
+  Conflict with dependency 'com.android.support:support-annotations' 
+  in project ':app'. Resolved versions for app (26.1.0) and test app (27.1.1) 
 
 - [-] 24 lint warnings remaining
   - [X] Obsolete Gradle Dependency
@@ -65,12 +76,6 @@
     =tail cov-int/build-log.txt=
   - [ ] Create and submit archive (from root directory)
     =tar caf aicc.bz2 cov-int=
-
-**** TODO Add a list preference to list network interfaces
-     CLOCK: [2018-04-26 jeu. 07:21]--[2018-04-26 jeu. 08:33] =>  1:12
-- [X] First, add the preference in layout
-- [X] Then in activity code, get the NetworkInterfacesList
-- [ ] May update screenshot in README
 **** DONE Correct project setup
      CLOCK: [2018-04-23 lun. 21:49]--[2018-04-23 lun. 22:24] =>  0:35
      CLOCK: [2018-04-23 lun. 21:30]--[2018-04-23 lun. 21:35] =>  0:05
