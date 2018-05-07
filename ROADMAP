@@ -26,6 +26,7 @@
   android:theme="@style/AndroidCupsPrint.AlertDialog"
 
 **** TODO Fix lint errors and submit to coverity scan
+     CLOCK: [2018-05-07 lun. 04:05]--[2018-05-07 lun. 04:20] =>  0:15
      CLOCK: [2018-04-24 mar. 19:22]--[2018-04-24 mar. 20:27] =>  1:05
 - [X] Fix lint errors
   - [X] Gradient-related attribute
@@ -33,9 +34,15 @@
   - [X] Using dp instead of sp
   - [X] Must translate more strings
 
-- [ ] How to build and submit
-  ~/cov/cov-analysis-linux64-2017.07/bin/cov-build --dir cov-int make
-  Follow https://scan.coverity.com/download?tab=java
+- [X] Sumit v0.0.0-2 to coverity
+  - [X] ~/cov/cov-analysis-linux64-2017.07/bin/cov-build --dir cov-int make
+  - [X] Check that at least 85% of the code was compiled
+    =tail cov-int/build-log.txt=
+  - [X] Create and submit archive (from root directory)
+    =tar caf aicc.bz2 cov-int=
+
+- [ ] Must actually fix 11 coverity defects
+
 - [ ] May rename application (Currently transparent-cups-client)
   Drawn name could be "CUPS intent"
 
@@ -45,7 +52,15 @@
 - [-] May use travis-ci and others here
   - [X] travis is supported
   https://docs.travis-ci.com/user/languages/android/
-  - [ ] Maybe coverity scan ?, codecov and codacy
+  - [X] Maybe coverity scan ?
+  - [ ] codecov and codacy
+
+- [ ] Sumit v0.0.0-3 to coverity
+  - [ ] Update cov-int directory
+  - [ ] Check that at least 85% of the code was compiled
+    =tail cov-int/build-log.txt=
+  - [ ] Create and submit archive (from root directory)
+    =tar caf aicc.bz2 cov-int=
 
 **** TODO Add a list preference to list network interfaces
      CLOCK: [2018-04-26 jeu. 07:21]--[2018-04-26 jeu. 08:33] =>  1:12
