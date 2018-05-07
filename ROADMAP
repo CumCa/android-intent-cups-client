@@ -32,7 +32,7 @@
 - [ ] May update screenshot in README
 
 **** TODO Fix lint errors and submit to coverity scan
-     CLOCK: [2018-05-07 lun. 06:15]
+     CLOCK: [2018-05-07 lun. 06:15]--[2018-05-07 lun. 06:35] =>  0:20
      CLOCK: [2018-05-07 lun. 05:14]--[2018-05-07 lun. 05:30] =>  0:16
      CLOCK: [2018-05-07 lun. 04:05]--[2018-05-07 lun. 04:20] =>  0:15
      CLOCK: [2018-04-24 mar. 19:22]--[2018-04-24 mar. 20:27] =>  1:05
@@ -47,8 +47,7 @@
     =tail cov-int/build-log.txt=
   - [X] Create and submit archive (from root directory)
     =tar caf aicc.bz2 cov-int=
-
-- [ ] Latest CI build failed
+- [X] Latest CI build failed
   Conflict with dependency 'com.android.support:support-annotations' 
   in project ':app'. Resolved versions for app (26.1.0) and test app (27.1.1) 
 
