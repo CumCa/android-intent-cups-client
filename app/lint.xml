@@ -3,4 +3,11 @@
   <issue id="OldTargetApi" severity="ignore" />
   <!-- It's a private app. not needed -->
   <issue id="GoogleAppIndexingWarning" severity="ignore" />
+
+  <!-- Ignore the UnusedResources issue for the given ids -->
+  <issue id="UnusedResources">
+    <ignore regexp="@id/host_not_verified_trust_button" />
+    <ignore path="src/main/res/drawable/ic_notifications_black_24dp.xml" />
+    <ignore path="src/main/res/drawable/ic_sync_black_24dp.xml" />
+  </issue>
 </lint>

@@ -57,7 +57,7 @@
   - [X] 13 issues remaining
   - [ ] 7 issues remaining
 
-- [ ] pref_ringtone_silent shouldn't be used in /SettingsActivity.java:142
+- [ ] pref_ringtone_silent shouldn't be used in SettingsActivity.java:142
 
 - [-] May use travis-ci and others here
   - [X] travis is supported
