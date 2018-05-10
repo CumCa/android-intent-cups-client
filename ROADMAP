@@ -62,6 +62,7 @@
   - [ ] codecov and codacy
 
 - [ ] Must actually fix 11 coverity defects
+  - [ ] Started with unused variables
 
 - [ ] May rename application (Currently transparent-cups-client)
   Drawn name could be "CUPS intent"

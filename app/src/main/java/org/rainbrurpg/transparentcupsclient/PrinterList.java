@@ -128,7 +128,6 @@ class PrinterList {
 	// Get CupsPrinter
 	final String pstr = printerUrl;
 	new AsyncTask<Void, Void, Void>() {
-	    Exception mException;
 	    boolean certException = false;
 	    URL purl = null;
 	    
@@ -146,7 +145,6 @@ class PrinterList {
 		catch (SSLException | CertificateException e) {
 		    certException = true;
 		} catch (Exception e) {
-		    mException = e;
 		    L.e("Error while getting jobs : ", e);
 		}
 		return null;
@@ -171,7 +169,6 @@ class PrinterList {
 	
 	final String pstr = printerUrl;
 	new AsyncTask<Void, Void, Void>() {
-	    Exception mException;
 	    boolean certException = false;
 	    URL purl = null;
 
@@ -200,7 +197,6 @@ class PrinterList {
 		    L.d("No route to host for " + pstr);
 		    
 		} catch (Exception e) {
-		    mException = e;
 		    L.e("Error while getting jobs : ", e);
 		}
 		return null;
