@@ -53,7 +53,11 @@
 
 - [-] 24 lint warnings remaining
   - [X] Obsolete Gradle Dependency
-  - [ ] Unused resources
+  - [X] Unused resources
+  - [X] 13 issues remaining
+  - [ ] 7 issues remaining
+
+- [ ] pref_ringtone_silent shouldn't be used in /SettingsActivity.java:142
 
 - [-] May use travis-ci and others here
   - [X] travis is supported
